@@ -1,30 +1,32 @@
-import Document, { Head, Main, NextScript } from 'next/document'
-import { extractCritical } from 'emotion-server'
+/* eslint-disable react/jsx-props-no-spreading */
+
+import Document from 'next/document'
+import { ServerStyleSheet } from 'styled-components'
 
 export default class MyDocument extends Document {
-  static getInitialProps({ renderPage }) {
-    const page = renderPage()
-    const styles = extractCritical(page.html)
-    return { ...page, ...styles }
-  }
+  static async getInitialProps(ctx) {
+    const sheet = new ServerStyleSheet()
+    const originalRenderPage = ctx.renderPage
 
-  render() {
-    return (
-      <html lang="en">
-        <Head>
-          <meta name="description" content="React package form and React hook for validation forms." />
-          <title>Next Lib Docs Starter</title>
-          <link rel="icon" href="form-complete.svg" />
-          <style
-            data-emotion-css={this.props.ids.join(' ')}
-            dangerouslySetInnerHTML={{ __html: this.props.css }}
-          />
-        </Head>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </html>
-    )
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        })
+
+      const initialProps = await Document.getInitialProps(ctx)
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      }
+    } finally {
+      sheet.seal()
+    }
   }
 }
