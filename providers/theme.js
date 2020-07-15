@@ -4,7 +4,7 @@ import {createGlobalStyle} from 'styled-components'
 export const theme = {
    colors:{
       primary: "#5bc0be",
-      second: "#3a506b",
+      secondary: "#3a506b",
       dark:"#0b132b",
       greyLight:"#edf2f4",
       red:"#e71d36"
@@ -18,10 +18,13 @@ export const GlobalStyle = createGlobalStyle`
       margin:0;
       font-size:16px;
       font-family: 'Roboto', sans-serif;
+      box-sizing: border-box 
    }
 
-   body{
-      overflow:hidden;
-      height:100%;
+
+   html, body {
+      width: 100%;
+      height: 100%;
    }
+
 `

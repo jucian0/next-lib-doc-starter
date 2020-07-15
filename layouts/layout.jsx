@@ -17,10 +17,17 @@ const Container = styled.div`
   height:100%;
 `
 
-const Content = styled.div`
+const MainContent = styled.div`
   display:flex;
   flex-direction:row;
   width:100%;
+`
+
+const Content = styled.div`
+  display:block;
+  width:100%;
+  height:100%;
+  padding:40px;
 `
 
 // eslint-disable-next-line react/prop-types
@@ -29,12 +36,12 @@ export default function Page({ children }) {
     <Main>
       <Container>
         <Navbar />
-        <Content>
+        <MainContent>
           <Sidebar />
-          <div>
+          <Content>
             {children}
-          </div>
-        </Content>
+          </Content>
+        </MainContent>
       </Container>
     </Main>
   )

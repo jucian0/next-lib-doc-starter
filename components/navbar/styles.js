@@ -1,17 +1,18 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-import { IoLogoGithub } from "react-icons/io";
 
 
 export const Container = styled.div`
    display:flex;
    width:100%;
    height:60px;
-   padding:5px;
    border-bottom: 1px solid ${({theme})=> theme.colors.greyLight};
    overflow:hidden;
    justify-content:space-between;
    align-items:center;
+   flex-direction: row;
+   align-items: center;
+   padding:5px 20px 5px 20px;
 `;
 
 export const Logo = styled.div`
@@ -44,6 +45,9 @@ export const Button = styled.button`
    height:40px;
    outline:none;
    background-color:transparent;
+   display:flex;
+   align-items:center;
+   justify-content:center;
 
    & svg{
       color:${({theme})=> theme.colors.primary};
