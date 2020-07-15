@@ -12,7 +12,7 @@ export const Container = styled.div`
    align-items:center;
    flex-direction: row;
    align-items: center;
-   padding:5px 20px 5px 20px;
+   padding:5px 0px 5px 20px;
 `;
 
 export const Logo = styled.div`
