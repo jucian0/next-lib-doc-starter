@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 
  import { Container, Item, Indicator } from './styles';
 
-function Sidebar() {
+function Sidebar({open}) {
   return (
-    <Container>
+    <Container open={open}>
       <Item>
         <Indicator />
         <span>

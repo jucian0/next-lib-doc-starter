@@ -3,13 +3,15 @@ import styled from "styled-components";
 
 export const Container = styled.div`
    display:flex;
-   width:200px;
+   width:${({open})=> open? "200px": 0};
    height:calc(100vh - 60px);
    flex-shrink: 0;
    background-color:${({theme})=> theme.colors.white};
    border-right:1px solid ${({theme})=> theme.colors.greyLight};
    flex-direction:column;
    padding-top:20px;
+   position:relative;
+   transform: 0.5s ease;
 `
 
 export const Indicator = styled.div`
