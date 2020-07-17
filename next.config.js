@@ -1,15 +1,10 @@
+const withPlugins = require('next-compose-plugins');
+const withImages = require('next-images')
+const withBlog = require('next-mdx-blog');
 const withMDX = require('@next/mdx')({
   extension: /\.(md|mdx)$/,
 })
-const withImages = require('next-images')
 
-module.exports = withMDX({
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-})
-
-
-module.exports = withImages({
-  webpack(config, options) {
-    return config
-  }
-})
+module.exports = withPlugins([withMDX, withBlog, withImages], {
+  pageExtensions: ['js', 'jsx', 'md', 'mdx']
+});
