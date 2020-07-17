@@ -3,12 +3,13 @@
 import React from 'react';
 import Link from 'next/link'
 import { IoLogoGithub,IoLogoTwitter ,IoMdMoon} from "react-icons/io";
+import { TiThMenu } from "react-icons/ti";
 
 
-import { Container, Logo, ActionButtons, Button } from './styles';
+import { Container, Logo, ActionButtons, Button,MenuButton } from './styles';
 import logo from "../../img/logo.svg";
 
-function Navbar() {
+function Navbar({setOpen}) {
   return (
     <Container>
       <Link href="/">
@@ -27,6 +28,11 @@ function Navbar() {
         <Button>
           <IoMdMoon />
         </Button>
+
+        <MenuButton onClick={setOpen}>
+          <TiThMenu />
+        </MenuButton>
+
       </ActionButtons>
     </Container>
   );

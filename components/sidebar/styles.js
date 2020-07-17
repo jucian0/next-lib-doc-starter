@@ -2,8 +2,8 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+   position:fixed;
    display:flex;
-   width:${({open})=> open? "200px": 0};
    height:calc(100vh - 60px);
    flex-shrink: 0;
    background-color:${({theme})=> theme.colors.white};
@@ -11,7 +11,9 @@ export const Container = styled.div`
    flex-direction:column;
    padding-top:20px;
    position:relative;
-   transform: 0.5s ease;
+   transition: all 0.5s ease-in-out;
+   left: ${({open})=>open? 0: "-200px" };
+   width:200px;
 `
 
 export const Indicator = styled.div`
@@ -29,6 +31,7 @@ export const Item = styled.div`
    padding:15px;
 
    & span{
+      display:flex;
       cursor: pointer;
       color:${({theme})=> theme.colors.secondary};
       font-size:16px;

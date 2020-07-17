@@ -63,3 +63,11 @@ export const Button = styled.button`
       margin:5px;
    }
 `;
+
+export const MenuButton = styled(Button)`
+   border:1px solid ${({theme})=> theme.colors.greyLight};
+
+   @media (min-width:989px){
+      display:none;
+   }
+`
