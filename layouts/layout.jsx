@@ -27,7 +27,7 @@ const MainContent = styled.div`
   justify-content:center;
   float:left;
   left:${({open})=> open? "0":"-200px"};
-  transition: all 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
 `
 
 const Content = styled.div`

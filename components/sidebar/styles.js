@@ -7,11 +7,11 @@ export const Container = styled.div`
    height:calc(100vh - 60px);
    flex-shrink: 0;
    background-color:${({theme})=> theme.colors.white};
-   border-right:1px solid ${({theme})=> theme.colors.greyLight};
+   border-right:1px solid ${({theme})=> theme.colors.border};
    flex-direction:column;
    padding-top:20px;
    position:relative;
-   transition: all 0.5s ease-in-out;
+   transition: left .5s ease-in-out;
    left: ${({open})=>open? 0: "-200px" };
    width:200px;
 `
@@ -20,7 +20,7 @@ export const Indicator = styled.div`
    height:10px;
    width:10px;
    border-radius:50%;
-   background-color:${({theme})=> theme.colors.secondary};
+   background-color:${({theme})=> theme.colors.textColor};
    margin:10px;
 `
 
@@ -33,7 +33,6 @@ export const Item = styled.div`
    & span{
       display:flex;
       cursor: pointer;
-      color:${({theme})=> theme.colors.secondary};
       font-size:16px;
       font-weight:400;
    }

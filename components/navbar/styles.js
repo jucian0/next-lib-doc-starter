@@ -6,7 +6,7 @@ export const Container = styled.div`
    display:flex;
    width:100%;
    height:60px;
-   border-bottom: 1px solid ${({theme})=> theme.colors.greyLight};
+   border-bottom: 1px solid ${({theme})=> theme.colors.border};
    overflow:hidden;
    justify-content:space-between;
    align-items:center;
@@ -50,13 +50,13 @@ export const Button = styled.button`
    justify-content:center;
 
    & svg{
-      color:${({theme})=> theme.colors.primary};
+      fill:${({theme})=> theme.colors.primary};
       width:21px;
       height:21px;
    }
 
    &:hover{
-      background-color:${({theme})=>theme.colors.greyLight};
+      background-color:${({theme})=>theme.colors.border};
    }
 
    & + button{
@@ -65,7 +65,7 @@ export const Button = styled.button`
 `;
 
 export const MenuButton = styled(Button)`
-   border:1px solid ${({theme})=> theme.colors.greyLight};
+   border:1px solid ${({theme})=> theme.colors.border};
 
    @media (min-width:989px){
       display:none;
