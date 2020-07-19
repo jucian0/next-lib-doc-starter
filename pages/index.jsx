@@ -1,12 +1,20 @@
 
- import React from 'react';
-// import { Container } from './styles';
+import React from 'react';
+import { DefaultSeo } from 'next-seo';
 
 function Index() {
   return (
-      <div>
-        <h1>Index Brazil</h1>
-      </div>
+    <div>
+      <DefaultSeo
+        title="Test Seo Index"
+        titleTemplate='%s | Next SEO'
+        description="Minha descrição"
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
+      <h1>Index Brazil</h1>
+    </div>
   );
 }
 
