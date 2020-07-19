@@ -1,6 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import {createGlobalStyle} from 'styled-components'
 
+import {ScrollBar} from "../components/scrollbar"
+
 export const lightTheme = {
    colors:{
       primary: "#5bc0be",
@@ -9,7 +11,9 @@ export const lightTheme = {
       border:"#edf2f4",
       red:"#e71d36",
       background:"#FFFFFF",
-      textColor:"#3a506b"
+      textColor:"#3a506b",
+      bkgPre:"#3a506b",
+      colorPre:"#edf2f4"
    }
 }
 
@@ -21,7 +25,9 @@ export const darkTheme = {
       border:"#1b262c",
       red:"#e71d36",
       background:"#0b132b",
-      textColor: "#edf2f4"
+      textColor: "#edf2f4",
+      bkgPre:"#3a506b",
+      colorPre:"#edf2f4"
    }
 }
 
@@ -34,6 +40,8 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
       color:${({theme})=> theme.colors.textColor};
+
+      ${ScrollBar}
    }
 
 
@@ -41,6 +49,10 @@ export const GlobalStyle = createGlobalStyle`
       width: 100%;
       height: 100%;
       background-color:${({theme})=> theme.colors.background};
+   }
+
+   pre{
+      background-color:transparent!important;
    }
 
 `

@@ -2,11 +2,16 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import CodeBlock from "../components/codeblock/index"
+import { H1, H2, P,Pre } from '../components/md'
 
 
 
 const mdComponents = {
-  code:CodeBlock
+  code:CodeBlock,
+  h1: H1,
+  h2:H2,
+  p:P,
+  pre:Pre
 }
 
 export default ({ children }) => (
