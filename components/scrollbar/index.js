@@ -4,9 +4,9 @@ import { css } from 'styled-components'
 export const ScrollBar = css`
    ::-webkit-scrollbar {
       width: 0.625rem;
-      background-color: rgba(0, 0, 0, 0);
-      border-top: 0.625rem solid rgba(0, 0, 0, 0);
-      border-bottom: 0.625rem solid rgba(0, 0, 0, 0);
+      background-color: transparent;
+      border-top: 0.625rem solid transparent;
+      border-bottom: 0.625rem solid transparent;
    }
 
    ::-webkit-scrollbar:hover {
@@ -14,19 +14,19 @@ export const ScrollBar = css`
    }
 
    ::-webkit-scrollbar-thumb:vertical {
-      background: rgba(0, 0, 0, 0.2);
+      background: ${({theme})=> theme.colors.bkgScrollbar};
       border-radius: 6.25rem;
       background-clip: padding-box;
-      border: 0.125rem solid rgba(0, 0, 0, 0);
+      border: 0.125rem solid transparent;
       min-height: 0.625rem;
    }
 
    ::-webkit-scrollbar-thumb:vertical:active {
-      background: rgba(0, 0, 0, 0.3);
+      background: ${({theme})=> theme.colors.bkgScrollbar};
       -webkit-border-radius: 6.25rem;
    }
    ::-webkit-scrollbar-thumb:vertical:hover {
-      background: rgba(0, 0, 0, 0.3);
+      background: ${({theme})=> theme.colors.bkgScrollbar};
       -webkit-border-radius: 6.25rem;
       width: 0.625rem;
    }
@@ -40,7 +40,7 @@ export const ScrollBar = css`
    }
 
    .horizontal-scroll::-webkit-scrollbar-thumb {
-      background: #3333;
+      background: ${({theme})=> theme.colors.bkgScrollbar};
       border-radius: 0.4375rem;
    }
 
@@ -50,6 +50,6 @@ export const ScrollBar = css`
    }
 
    .horizontal-scroll::-webkit-scrollbar-thumb:hover {
-      background: #adadad;
+      background: ${({theme})=> theme.colors.bkgScrollbar};
    }
 `

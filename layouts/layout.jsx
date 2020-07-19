@@ -20,7 +20,7 @@ const Container = styled.div`
   width:100%;
 `
 const MainContent = styled.div`
-  display:block;
+  display:flex;
   width: ${({open})=>!open? "100%" :"calc(100% - 200px)"};
   position:fixed;
   height:100%;
@@ -28,6 +28,7 @@ const MainContent = styled.div`
   float:left;
   left:${({open})=> open? "200px":"0"};
   transition: all 0.5s ease-in-out;
+  overflow:auto;
 `
 
 const Content = styled.div`
@@ -37,7 +38,6 @@ const Content = styled.div`
   padding:40px;
   max-width:1440px;
   background-color:${({theme})=> theme.colors.bkgContent};
-  overflow:auto;
 `
 
 // eslint-disable-next-line react/prop-types

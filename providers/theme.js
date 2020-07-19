@@ -13,7 +13,8 @@ export const lightTheme = {
       background:"#FFFFFF",
       textColor:"#3a506b",
       bkgPre:"#edf2f4",
-      colorPre:"#edf2f4"
+      colorPre:"#edf2f4",
+      bkgScrollbar:"#3a506b"
    }
 }
 
@@ -27,7 +28,9 @@ export const darkTheme = {
       background:"#0b132b",
       textColor: "#edf2f4",
       bkgPre:"#3a506b",
-      colorPre:"#edf2f4"
+      colorPre:"#edf2f4",
+      bkgScrollbar:"#3a506b",
+
    }
 }
 
