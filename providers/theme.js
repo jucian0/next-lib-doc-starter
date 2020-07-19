@@ -39,8 +39,6 @@ export const GlobalStyle = createGlobalStyle`
       font-size:16px;
       font-family: 'Roboto', sans-serif;
       box-sizing: border-box;
-      color:${({theme})=> theme.colors.textColor};
-
       ${ScrollBar}
    }
 

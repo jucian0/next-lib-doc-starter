@@ -2,7 +2,7 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import CodeBlock from "../components/codeblock/index"
-import { H1, H2, P,Pre } from '../components/md'
+import { H1, H2, P,Pre,H3,H4 } from '../components/md'
 
 
 
@@ -10,6 +10,8 @@ const mdComponents = {
   code:CodeBlock,
   h1: H1,
   h2:H2,
+  h3:H3,
+  h4:H4,
   p:P,
   Inline:Pre
 }

@@ -14,6 +14,7 @@ export const Container = styled.div`
    transition: left .5s ease-in-out;
    left: ${({open})=>open? 0: "-200px" };
    width:200px;
+   color:${({theme})=> theme.colors.textColor};
 `
 
 export const Indicator = styled.div`

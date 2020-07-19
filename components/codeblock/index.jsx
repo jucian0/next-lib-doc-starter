@@ -12,6 +12,7 @@ export default function CodeBlock({ children, className}){
    return (
      <Container>
        <CopyBlock
+         className="code-block"
          language={language}
          text={children.trim()}
          codeBlock
