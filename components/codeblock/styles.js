@@ -6,6 +6,9 @@ export const Container = styled.pre`
    padding: .25rem;
    border-radius:.25rem;
    background-color:transparent!important;
-   
+
+   & pre{
+      background-color:transparent!important;
+   }
 `
 

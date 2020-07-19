@@ -11,7 +11,7 @@ const mdComponents = {
   h1: H1,
   h2:H2,
   p:P,
-  pre:Pre
+  Inline:Pre
 }
 
 export default ({ children }) => (

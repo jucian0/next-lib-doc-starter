@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 /* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
 
@@ -23,12 +24,23 @@ export const P = styled.p`
    box-sizing: border-box;
    margin-top: 0;
 `
-export const Pre = styled.pre`
-   /* background-color:${({theme})=> theme.colors.bkgPre};
-   border-radius:.3rem;
-   border: 0.025rem solid ${({theme})=> theme.colors.border};
-   font-size:1rem;
-   padding: 0.125rem 0.25rem;
+export const StyledPre = styled.div`
    display:inline;
-   color:${({theme})=> theme.colors.colorPre} */
+   span{
+      background-color:${({theme})=> theme.colors.bkgPre};
+      border-radius:.3rem;
+      font-size:1rem;
+      font-family:Monospace;
+      padding: 0.125rem 0.25rem;
+      display:inline;
+      color:${({theme})=> theme.colors.textColor};
+   }
 `
+
+export function Pre({children}){
+   return (
+     <StyledPre>
+       <span>{children}</span>
+     </StyledPre>
+   )
+}

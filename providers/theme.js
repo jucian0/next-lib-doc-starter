@@ -12,7 +12,7 @@ export const lightTheme = {
       red:"#e71d36",
       background:"#FFFFFF",
       textColor:"#3a506b",
-      bkgPre:"#3a506b",
+      bkgPre:"#edf2f4",
       colorPre:"#edf2f4"
    }
 }
@@ -49,10 +49,6 @@ export const GlobalStyle = createGlobalStyle`
       width: 100%;
       height: 100%;
       background-color:${({theme})=> theme.colors.background};
-   }
-
-   pre{
-      background-color:transparent!important;
    }
 
 `
