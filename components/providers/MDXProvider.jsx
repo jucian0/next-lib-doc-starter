@@ -1,9 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import CodeBlock from "../components/codeblock/index"
-import { H1, H2, P,Pre,H3,H4 } from '../components/md'
-
+import CodeBlock from "../codeblock"
+import { H1, H2, P,Pre,H3,H4 } from '../md'
 
 
 const mdComponents = {

@@ -9,7 +9,7 @@ import { TiThMenu } from "react-icons/ti";
 
 import { Container, Logo, ActionButtons, Button,MenuButton } from './styles';
 import logo from "../../img/logo.svg";
-import { ThemeContext } from '../../pages/_app';
+import { ThemeContext } from "../providers/themeContext";
 
 function Navbar({setOpen}) {
 

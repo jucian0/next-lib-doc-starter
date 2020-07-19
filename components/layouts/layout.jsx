@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 
-import Navbar from '../components/navbar'
-import Sidebar from '../components/sidebar'
+import Navbar from '../navbar'
+import Sidebar from '../sidebar'
 
 
 const Main = styled.main`

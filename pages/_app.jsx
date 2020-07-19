@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { createContext, useState } from 'react'
+import React, { useState } from 'react'
 import { ThemeProvider } from 'styled-components'
-import MDXProvider from '../providers/MDXProvider'
-import { lightTheme, GlobalStyle, darkTheme } from '../providers/theme'
-
-export const ThemeContext = createContext({})
+import MDXProvider from '../components/providers/MDXProvider'
+import { lightTheme, GlobalStyle, darkTheme } from '../components/providers/theme'
+import {ThemeContext} from '../components/providers/themeContext'
+import Default from '../components/layouts/layout'
 
 export default ({ Component, pageProps }) => {
 
@@ -15,7 +15,9 @@ export default ({ Component, pageProps }) => {
     <ThemeContext.Provider value={{theme, setTheme:()=>setTheme(!theme)}}>
       <ThemeProvider theme={theme? lightTheme: darkTheme}>
         <MDXProvider>
-          <Component {...pageProps} />
+          <Default>
+            <Component {...pageProps} />
+          </Default>
         </MDXProvider>
         <GlobalStyle />
       </ThemeProvider>

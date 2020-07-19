@@ -1,7 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 import {createGlobalStyle} from 'styled-components'
+import {createContext} from 'react'
 
-import {ScrollBar} from "../components/scrollbar"
+import {ScrollBar} from "../scrollbar"
 
 export const lightTheme = {
    colors:{
