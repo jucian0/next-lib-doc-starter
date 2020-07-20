@@ -1,4 +1,4 @@
-# Next Library Starter
+# Next Documentation Library Starter
 ## Getting Started
 
 ## Demo https://next-lib-doc-starter.vercel.app/
