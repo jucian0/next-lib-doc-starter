@@ -31,18 +31,30 @@ export const Item = styled.div`
    justify-content:flex-start;
    padding:15px;
 
-   & span{
+   & a{
       display:flex;
       cursor: pointer;
       font-size:16px;
       font-weight:400;
+      text-decoration:none;
+      color:${({theme})=> theme.colors.textColor};
+
+   }
+
+   &.active{
+      a{
+         color:${({theme})=> theme.colors.primary};
+      }      
+      ${Indicator}{
+         background-color:${({theme})=> theme.colors.primary};
+      }
    }
 
    &:hover{
       ${Indicator}{
          background-color:${({theme})=> theme.colors.primary};
       }
-      span{
+      a{
          color:${({theme})=> theme.colors.primary};
       }
    }

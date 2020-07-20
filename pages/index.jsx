@@ -8,12 +8,12 @@ function Index() {
       <DefaultSeo
         title="Test Seo Index"
         titleTemplate='%s | Next SEO'
-        description="Minha descrição"
+        description="My description"
         twitter={{
           cardType: 'summary_large_image',
         }}
       />
-      <h1>Index Brazil</h1>
+      <h1>Index</h1>
     </div>
   );
 }
