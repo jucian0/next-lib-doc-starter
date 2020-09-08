@@ -34,6 +34,7 @@ export const darkTheme = {
 
 export const GlobalStyle = createGlobalStyle`
    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
    *{
       margin:0;
       font-size:16px;
@@ -47,6 +48,17 @@ export const GlobalStyle = createGlobalStyle`
       height: 100%;
       background-color:${({ theme }) => theme.colors.background};
    }
+
+   pre, code{
+      font-family: 'Fira Code', monospace;
+      font-weight: 300;
+   }
+
+
+   table, ul, li{
+      color: ${({ theme }) => theme.colors.textColor};
+   }
+
    .__json-pretty__{
       line-height:1.3;
       color:#bd93f9;
