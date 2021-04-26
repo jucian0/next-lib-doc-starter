@@ -12,8 +12,8 @@ export const Container = styled.div`
   padding-top: 20px;
   position: relative;
   transition: left 0.5s ease-in-out;
-  left: ${({ open }) => (open ? 0 : '-200px')};
-  width: 200px;
+  left: ${({ open }) => (open ? 0 : '-240px')};
+  width: 240px;
   color: ${({ theme }) => theme.colors.textColor};
 `
 

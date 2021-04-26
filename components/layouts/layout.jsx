@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
+// import {PrintMarkdown} from '../contents'
 
 const Main = styled.main`
   display: flex;
@@ -20,12 +21,12 @@ const Container = styled.div`
 `
 const MainContent = styled.div`
   display: flex;
-  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 200px)')};
+  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 240px)')};
   height: calc(100% - 60px);
   position: fixed;
   justify-content: center;
   float: left;
-  left: ${({ open }) => (open ? '200px' : '0')};
+  left: ${({ open }) => (open ? '240px' : '0')};
   transition: all 0.5s ease-in-out;
   overflow: auto;
 `
@@ -35,7 +36,7 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   padding: 40px;
-  max-width: 1440px;
+  max-width: 1040px;
   background-color: ${({ theme }) => theme.colors.bkgContent};
 `
 
@@ -56,6 +57,8 @@ export default function Page({ children }) {
     resize()
   }, [])
 
+  console.log(children)
+
   return (
     <Main>
       <Navbar setOpen={() => setOpen(!open)} />
@@ -63,6 +66,7 @@ export default function Page({ children }) {
         <Sidebar open={open} />
         <MainContent open={open}>
           <Content>{children}</Content>
+          {/* <PrintMarkdown markdown={children} /> */}
         </MainContent>
       </Container>
     </Main>

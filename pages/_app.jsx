@@ -11,6 +11,8 @@ export default ({ Component, pageProps }) => {
 
   const [theme, setTheme] = useState( true)
 
+  console.log(pageProps,Component)
+
   return(
     <ThemeContext.Provider value={{theme, setTheme:()=>setTheme(!theme)}}>
       <ThemeProvider theme={theme? lightTheme: darkTheme}>
