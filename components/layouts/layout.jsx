@@ -10,8 +10,16 @@ const Main = styled.main`
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items:center;
   width: 100%;
   height: 100%;
+`
+
+const MainContainer = styled.div`
+  display:flex;
+  max-width:1440px;
+  width:100%;
+  height:100%;
 `
 
 const Container = styled.div`
@@ -57,18 +65,18 @@ export default function Page({ children }) {
     resize()
   }, [])
 
-  console.log(children)
 
   return (
     <Main>
       <Navbar setOpen={() => setOpen(!open)} />
-      <Container>
-        <Sidebar open={open} />
-        <MainContent open={open}>
-          <Content>{children}</Content>
-          {/* <PrintMarkdown markdown={children} /> */}
-        </MainContent>
-      </Container>
+      <MainContainer>
+        <Container>
+          <Sidebar open={open} />
+          <MainContent open={open}>
+            <Content>{children}</Content>
+          </MainContent>
+        </Container>
+      </MainContainer>
     </Main>
   )
 }

@@ -8,6 +8,8 @@ export const Container = styled.div`
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors.white};
   border-right: 1px solid ${({ theme }) => theme.colors.border};
+  /* border-left: 1px solid ${({ theme }) => theme.colors.border}; */
+
   flex-direction: column;
   padding-top: 20px;
   position: relative;
@@ -29,7 +31,7 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 15px;
+  padding: 15px 30px;
 
   & a {
     display: flex;

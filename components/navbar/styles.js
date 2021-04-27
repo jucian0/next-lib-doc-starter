@@ -2,17 +2,29 @@
 import styled from 'styled-components';
 
 
+export const Wrapper = styled.div`
+   display:flex;
+   width:100%;
+   height:60px;
+   overflow:hidden;
+   justify-content:center;
+   align-items:center;
+   flex-direction: row;
+   align-items: center;
+   border-bottom: 1px solid ${({theme})=> theme.colors.border};
+`;
+
 export const Container = styled.div`
    display:flex;
    width:100%;
    height:60px;
-   border-bottom: 1px solid ${({theme})=> theme.colors.border};
    overflow:hidden;
    justify-content:space-between;
    align-items:center;
    flex-direction: row;
    align-items: center;
    padding:5px 0px 5px 20px;
+   max-width:1440px;
 `;
 
 export const Logo = styled.div`
