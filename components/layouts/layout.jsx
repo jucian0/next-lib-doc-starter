@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
-// import {PrintMarkdown} from '../contents'
 
 const Main = styled.main`
   display: flex;
