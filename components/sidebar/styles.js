@@ -10,9 +10,11 @@ export const Container = styled.aside`
   border-right: 1px solid ${({ theme }) => theme.colors.border};
   flex-direction: column;
   padding-top: 20px;
-  position: relative;
-  transition: left 0.5s ease-in-out;
-  left: ${({ open }) => (open ? 0 : '-240px')};
+  position: sticky;
+  overflow:auto;
+  top:60px;
+  transition: margin-left 0.5s ease-in-out;
+  margin-left: ${({ open }) => (open ? 0 : '-240px')};
   width: 240px;
   color: ${({ theme }) => theme.colors.textColor};
 `

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const Container = styled.div`
+export const Container = styled.footer`
   background: #ccc;
   height: 50px;
   line-height: 50px;

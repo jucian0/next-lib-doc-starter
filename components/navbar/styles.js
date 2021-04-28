@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.nav`
    display:flex;
    width:100%;
    height:60px;
@@ -12,6 +12,9 @@ export const Wrapper = styled.div`
    flex-direction: row;
    align-items: center;
    border-bottom: 1px solid ${({theme})=> theme.colors.border};
+   position:fixed;
+   background-color: ${({theme})=>theme.colors.background};
+   z-index:1;
 `;
 
 export const Container = styled.div`
