@@ -1,6 +1,7 @@
 /* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import Footer from '../footer'
 
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
@@ -11,14 +12,11 @@ const Main = styled.main`
   flex-direction: column;
   align-items:center;
   width: 100%;
-  height: 100%;
 `
 
 const MainContainer = styled.div`
-  display:flex;
   max-width:1440px;
   width:100%;
-  height:100%;
 `
 
 const Container = styled.div`
@@ -30,7 +28,7 @@ const MainContent = styled.div`
   display: flex;
   width: ${({ open }) => (!open ? '100%' : 'calc(100% - 240px)')};
   height: calc(100% - 60px);
-  position: fixed;
+  /* position: fixed; */
   justify-content: center;
   float: left;
   left: ${({ open }) => (open ? '240px' : '0')};
@@ -41,7 +39,6 @@ const MainContent = styled.div`
 const Content = styled.div`
   display: block;
   width: 100%;
-  height: 100%;
   padding: 40px;
   max-width: 1040px;
   background-color: ${({ theme }) => theme.colors.bkgContent};
@@ -66,16 +63,19 @@ export default function Page({ children }) {
 
 
   return (
-    <Main>
+    <>
       <Navbar setOpen={() => setOpen(!open)} />
-      <MainContainer>
-        <Container>
-          <Sidebar open={open} />
-          <MainContent open={open}>
-            <Content>{children}</Content>
-          </MainContent>
-        </Container>
-      </MainContainer>
-    </Main>
+      <Main>
+        <MainContainer>
+          <Container>
+            <Sidebar open={open} />
+            <MainContent open={open}>
+              <Content>{children}</Content>
+            </MainContent>
+          </Container>
+        </MainContainer>
+      </Main>
+      <Footer />
+    </>
   )
 }

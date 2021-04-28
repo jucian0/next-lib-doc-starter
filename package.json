@@ -21,7 +21,6 @@
     "polished": "^3.6.5",
     "prism-react-renderer": "^1.2.0",
     "react": "^16.13.1",
-    "react-code-blocks": "^0.0.8",
     "react-dom": "^16.13.1",
     "react-grid-system": "^6.4.2",
     "react-icons": "^3.10.0",

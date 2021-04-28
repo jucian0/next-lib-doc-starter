@@ -1,15 +1,13 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.aside`
   position: fixed;
   display: flex;
   height: calc(100vh - 60px);
   flex-shrink: 0;
   background-color: ${({ theme }) => theme.colors.white};
   border-right: 1px solid ${({ theme }) => theme.colors.border};
-  /* border-left: 1px solid ${({ theme }) => theme.colors.border}; */
-
   flex-direction: column;
   padding-top: 20px;
   position: relative;
@@ -24,7 +22,7 @@ export const Indicator = styled.div`
   width: 10px;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.colors.textColor};
-  margin: 10px;
+  margin: 3px;
 `
 
 export const Item = styled.div`
@@ -43,6 +41,7 @@ export const Item = styled.div`
   }
 
   &.active {
+    background-color: ${({ theme }) => theme.colors.border};
     a {
       color: ${({ theme }) => theme.colors.primary};
     }

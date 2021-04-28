@@ -3,39 +3,54 @@
 import styled from "styled-components";
 
 export const H1 = styled.h1`
-   font-size:2em;
-   color:${({theme})=> theme.colors.textColor};
+   color:${({theme})=> theme.colors.headingColor};
    font-weight:bold;
-   line-height:1.25;
+   font-size: 2em;
+    margin-top: 1.6em;
+    margin-bottom: .8em;
+    line-height: 1.4;
+    scroll-margin-top: 1.6em;
 `
 
 export const H2 = styled.h2`
-   font-size:1.5em;
-   color:${({theme})=> theme.colors.textColor};
+   font-size:1.4285714em;
+   color:${({theme})=> theme.colors.headingColor};
    font-weight:bold;
-   line-height:1.25;
+   margin-top: 1.6em;
+    margin-bottom: .8em;
+    line-height: 1.4;
+    scroll-margin-top: 1.6em;
 `
 
 export const H3 = styled.h2`
-   font-size:1.3rem;
-   color:${({theme})=> theme.colors.textColor};
-   font-weight:bold;
-   line-height:1.25em;
+   color:${({theme})=> theme.colors.headingColor};
+   font-size: 1.2857143em;
+    margin-top: 1.5555556em;
+    margin-bottom: .4444444em;
+    line-height: 1.5555556;
+    scroll-margin-top: 1.5555556em;
 `
 
 export const H4 = styled.h2`
    font-size:1rem;
-   color:${({theme})=> theme.colors.textColor};
+   color:${({theme})=> theme.colors.headingColor};
    font-weight:bold;
-   line-height:1.25em;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   line-height: 1.4;
+   scroll-margin-top: 1.6em;
 `
 
 export const P = styled.p`
-   font-size:1rem;
    font-weight:normal;
    color:${({theme})=> theme.colors.textColor};
    box-sizing: border-box;
    margin-top: 0;
+   margin-top: 1.6em;
+   margin-bottom: .8em;
+   font-size: .875rem;
+   line-height: 1.7142857;
+   scroll-margin-top: 1.6em;
 `
 export const StyledPre = styled.div`
    display:inline;
@@ -45,7 +60,7 @@ export const StyledPre = styled.div`
       font-size:.75rem;
       font-family:Monospace;
       padding: 0.125rem 0.25rem;
-      display:inline; */
+      display:inline;
       color:${({theme})=> theme.colors.textColor};
    }
 `
