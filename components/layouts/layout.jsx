@@ -28,7 +28,7 @@ const MainContent = styled.div`
   display: flex;
   width: ${({ open }) => (!open ? '100%' : 'calc(100% - 240px)')};
   height: calc(100% - 60px);
-  /* position: fixed; */
+  position: fixed;
   justify-content: center;
   float: left;
   left: ${({ open }) => (open ? '240px' : '0')};
