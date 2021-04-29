@@ -20,7 +20,7 @@ display:grid;
   padding:20px 10px;
   max-width:1440px;
   a{
-    color:${({theme})=> theme.colors.primary};
+    color:${({theme})=> theme.colors.textColor};
     text-decoration:none;
     &:hover{
       color:${({theme})=> theme.colors.primaryHover};
@@ -29,7 +29,7 @@ display:grid;
 `
 
 export const FooterInformation = styled.div`
-color:${({theme})=> theme.colors.textColor};
+  color:${({theme})=> theme.colors.textColor};
   width:100%;
   margin-top:10px;
   display:flex;
