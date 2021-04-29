@@ -7,7 +7,8 @@ import { IoLogoGithub,IoLogoTwitter ,IoMdMoon,IoIosSunny} from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 
 
-import { Container, Logo, ActionButtons, Button,MenuButton,Wrapper } from './styles';
+import { Container, ActionButtons, Button,MenuButton,Wrapper } from './styles';
+import {Logo} from '../logo'
 import logo from "../../img/logo.svg";
 import { ThemeContext } from "../providers/themeContext";
 

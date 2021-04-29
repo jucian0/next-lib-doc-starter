@@ -5,6 +5,7 @@ import { ScrollBar } from '../scrollbar'
 export const lightTheme = {
   colors: {
     primary: '#2ec4b6',
+    primaryHover:'#29B0A3',
     secondary: '#3a506b',
     dark: '#0b132b',
     border: '#edf2f4',
@@ -21,6 +22,7 @@ export const lightTheme = {
 export const darkTheme = {
   colors: {
     primary: '#2ec4b6',
+    primaryHover:'#29B0A3',
     secondary: '#3a506b',
     dark: '#0b132b',
     border: '#1b262c',
@@ -50,5 +52,34 @@ export const GlobalStyle = createGlobalStyle`
       width: 100%;
       height: 100%;
       background-color:${({ theme }) => theme.colors.background};
+   }
+
+   h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    }
+
+   a{
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.secondary};
+   }
+
+   p{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.textColor};
+   }
+
+   strong{
+     font-weight:500;
+   }
+
+   line-height, ul {
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.textColor};
    }
 `

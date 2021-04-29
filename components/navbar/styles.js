@@ -24,25 +24,8 @@ export const Container = styled.div`
    overflow:hidden;
    justify-content:space-between;
    align-items:center;
-   flex-direction: row;
-   align-items: center;
    padding:5px 0px 5px 20px;
    max-width:1440px;
-`;
-
-export const Logo = styled.div`
-   display:flex;
-   align-items:center;
-   cursor: pointer;
-   & img{
-      width:50px;
-      height:50px;
-   }
-
-   & span{
-      font-size:23px;
-      color:${({theme})=> theme.colors.primary};
-   }
 `;
 
 export const ActionButtons = styled.div`

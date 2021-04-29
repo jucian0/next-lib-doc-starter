@@ -48,7 +48,7 @@ export const P = styled.p`
    margin-top: 0;
    margin-top: 1.6em;
    margin-bottom: .8em;
-   font-size: .875rem;
+   font-size: 1rem;
    line-height: 1.7142857;
    scroll-margin-top: 1.6em;
 `
