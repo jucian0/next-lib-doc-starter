@@ -11,25 +11,28 @@ import Default from '../components/layouts/layout'
 
 export default ({ Component, pageProps }) => {
   
-  const [theme, setTheme] = useState( 'light')
-  
+  const [theme, setTheme] = useState('light')
+
+  function handleTheme(selectedTheme){
+    if (typeof window !== "undefined") {
+      setTheme(selectedTheme)
+      localStorage.setItem('theme', selectedTheme)
+    }
+  }
   
   useLayoutEffect(()=>{
+
     if (typeof window !== "undefined") {
-
-      const useTheme = localStorage.getItem('theme');
-
-      setTheme(useTheme||'light')
     
-     // localStorage.setItem(key, value)
-      
+      const currentTheme = localStorage.getItem('theme')
+          handleTheme(currentTheme||'light')
       }
 
   },[])
 
   return(
-    <ThemeContext.Provider value={{theme, setTheme:()=>setTheme(!theme)}}>
-      <ThemeProvider theme={theme === 'light'? lightTheme: darkTheme}>
+    <ThemeContext.Provider value={{theme, setTheme:handleTheme}}>
+      <ThemeProvider theme={theme ==='light'? lightTheme: darkTheme}>
         <MDXProvider>
           <Default>
             <Component {...pageProps} />

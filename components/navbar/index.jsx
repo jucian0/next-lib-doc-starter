@@ -19,15 +19,8 @@ function Navbar({setOpen}) {
 
 
   function handleTheme(){
-    if (typeof window !== "undefined") {
-
       const selectedTheme = theme === 'light'? 'dark':'light'
-
       setTheme(selectedTheme)
-    
-      localStorage.setItem('theme', selectedTheme)
-      
-      }
   }
 
   
