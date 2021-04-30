@@ -4,12 +4,14 @@
 import React from 'react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from "prism-react-renderer/themes/palenight";
-import { MdContentCopy } from "react-icons/md";
+import { MdContentCopy,MdCheck } from "react-icons/md";
+import useClipboard from "react-use-clipboard";
 import {Container,} from './styles'
 
 
 export default function CodeBlock({ children, className}){
    const language = className.replace(/language-/, '')
+   const [isCopied, setCopied] = useClipboard(children,{successDuration:1000});
 
    return (
      <Highlight {...defaultProps} code={children} language={language} theme={theme}>
@@ -18,7 +20,7 @@ export default function CodeBlock({ children, className}){
            <pre className={className} style={style}>
              <div className="header">
                <div className="language">{language}</div>
-               <CopyButton />
+               <CopyButton onClick={setCopied} isCopied={isCopied}/>
              </div>
              {tokens.map((line, i) => (
                <div {...getLineProps({ line, key: i })}>
@@ -34,9 +36,9 @@ export default function CodeBlock({ children, className}){
    )
 }
 
-export const CopyButton = ({ hasCopied, ...props }) => {
+export const CopyButton = ({ isCopied, ...props }) => {
   return (
     // eslint-disable-next-line react/button-has-type
-    <button {...props}><MdContentCopy color="#fff" /></button>
+    <button {...props}>{isCopied ? <MdCheck color="#fff"/>:<MdContentCopy color="#fff" />}</button>
   )
 }
