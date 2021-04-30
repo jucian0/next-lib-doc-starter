@@ -10,18 +10,6 @@ export default function Footer(){
    return(
      <Container>
        <FooterContent>
-         {/* <FooterInformation>
-           <span><Link href="/">Let's start</Link></span>
-           <span><Link href="/">Github</Link></span>
-           <span><Link href="/">Twitter</Link></span>
-           <span><Link href="/">Version</Link></span>
-         </FooterInformation>
-         <FooterLogo>
-           <Logo>
-             <img src={logo} alt="logo" />
-             <span>UseForm</span>
-           </Logo>
-         </FooterLogo> */}
          <FooterLogo>
            <Logo>
              <img src={logo} alt="logo" />

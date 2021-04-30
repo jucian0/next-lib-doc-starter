@@ -5,7 +5,46 @@ import {useRouter} from 'next/router'
 import { GoChevronRight } from "react-icons/go";
 import { ThemeContext } from 'styled-components';
 
-import { Container, Item } from './styles';
+import { Container, Item, SubList,Item2 } from './styles';
+
+
+const links = [
+  {
+    link:'input',
+    name:'Input',
+    sublink:[
+      {
+        link:'input',
+        name:'Input'
+      },
+      {
+        link:'input',
+        name:'Input'
+      },
+      {
+        link:'input',
+        name:'Input'
+      },
+    ]
+  },
+  {
+    link:'input',
+    name:'Input'
+  },
+  {
+    link:'input',
+    name:'Input'
+  },
+  {
+    link:'input',
+    name:'Input'
+  },
+  {
+    link:'input',
+    name:'Input'
+  },
+]
+
 
 function ActiveLink({ href,children }){
   const router = useRouter()
@@ -26,33 +65,27 @@ function Sidebar({open}) {
 
   return (
     <Container open={open}>
-      <ActiveLink href="/doc/input0">
-        Input 0
-      </ActiveLink>
-      <ActiveLink href="/doc/input1">
-        Input 1
-      </ActiveLink>      
-      <ActiveLink href="/doc/input2">
-        Input 2
-      </ActiveLink>      
-      <ActiveLink href="/doc/input3">
-        Input 3
-      </ActiveLink>      
-      <ActiveLink href="/doc/input4">
-        Input 4
-      </ActiveLink>      
-      <ActiveLink href="/doc/input5">
-        Input 5
-      </ActiveLink>      
-      <ActiveLink href="/doc/input6">
-        Input 6
-      </ActiveLink>
-      <ActiveLink href="/doc/input7">
-        Input 7
-      </ActiveLink>
-      <ActiveLink href="/doc/input8">
-        Input 8
-      </ActiveLink>
+      {
+        links.map(link=>(
+          <Item2 key={link.name}>
+            <SubList>
+              {
+            link.name
+          }
+              {
+            link.sublink?.map(sub=>(
+              <ActiveLink key={sub.name} href={sub.link}>
+                {
+            sub.name
+          }
+              </ActiveLink>
+            ))
+          }
+            </SubList>
+          </Item2>
+        ))
+      }
+
     </Container>
   );
 }

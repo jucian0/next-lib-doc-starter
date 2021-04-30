@@ -1,6 +1,20 @@
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components'
 
+export const SubList = styled.div`
+  position: fixed;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  padding-top: 20px;
+  position: sticky;
+  overflow:auto;
+  top:60px;
+  transition: margin-left 0.5s ease-in-out;
+  width: 240px;
+  color: ${({ theme }) => theme.colors.textColor};
+`
+
 export const Container = styled.aside`
   position: fixed;
   display: flex;
@@ -27,6 +41,17 @@ export const Indicator = styled.div`
   margin: 3px;
 `
 
+export const Item2 = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px 30px;
+  font-weight:600;
+  &:hover{
+    cursor:pointer;
+  }
+`
+
 export const Item = styled.div`
   display: flex;
   align-items: center;
@@ -46,6 +71,7 @@ export const Item = styled.div`
     background-color: ${({ theme }) => theme.colors.border};
     a {
       color: ${({ theme }) => theme.colors.primary};
+      font-weight:600;
     }
     ${Indicator} {
       background-color: ${({ theme }) => theme.colors.primary};
@@ -57,6 +83,7 @@ export const Item = styled.div`
       background-color: ${({ theme }) => theme.colors.primary};
     }
     a {
+      font-weight:600;
       color: ${({ theme }) => theme.colors.primary};
     }
   }

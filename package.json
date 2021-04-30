@@ -25,6 +25,7 @@
     "react-grid-system": "^6.4.2",
     "react-icons": "^3.10.0",
     "react-json-view": "^1.19.1",
+    "react-use-clipboard": "^1.0.7",
     "remark-parse": "^9.0.0",
     "remark-react": "^8.0.0",
     "styled-components": "^5.1.1",
