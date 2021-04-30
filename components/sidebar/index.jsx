@@ -17,7 +17,7 @@ const links = [
     subItems:[
       {
         label:'Quick Start',
-        link:'/doc/input0'
+        link:'/doc/input'
       }
     ]
   },
@@ -26,20 +26,20 @@ const links = [
     link:'',
     subItems:[
       {
-        label:'useForm()',
-        link:'/doc/use-form'
+        label:'firstItem()',
+        link:'/doc/api/first-item'
       },
       {
-        label:'useFormContext',
-        link:'/doc/use-form-context'
+        label:'secondItem',
+        link:'/doc/api/second-item'
       },
       {
-        label:'useValidation()',
-        link:'/doc/use-validation'
+        label:'lastItem()',
+        link:'/doc/api/last-item'
       },
       {
-        label:'<ContextForm/>',
-        link:'/doc/context-form'
+        label:'useExample()',
+        link:'/doc/api/use-example'
       },
     ]
   },
@@ -48,24 +48,16 @@ const links = [
     link:'',
     subItems:[
       {
-        label:'Controlled form',
-        link:'/doc/controlled-form'
+        label:'How to use',
+        link:'/doc/usage/first-item'
       },
       {
         label:'Debounced form',
-        link:'/doc/debounced-form'
+        link:'/doc/usage/second-item'
       },
       {
         label:'Uncontrolled form',
-        link:'/doc/uncontrolled-form'
-      },
-      {
-        label:'Validation',
-        link:'/doc/validation-form'
-      },
-      {
-        label:'Custom fields',
-        link:'/doc/custom-fields'
+        link:'/doc/usage/last-item'
       },
     ]
   },
@@ -106,7 +98,7 @@ function Sidebar({open}) {
               <SubItems>
                 {
             link.subItems?.map(subItem =>(
-              <ActiveLink href="/">{subItem.label}</ActiveLink>
+              <ActiveLink href={subItem.link}>{subItem.label}</ActiveLink>
             ))
           }
               </SubItems>

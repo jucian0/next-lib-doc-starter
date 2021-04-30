@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 
 
@@ -16,6 +17,19 @@ function Navbar({setOpen}) {
 
   const {setTheme, theme} =  useContext(ThemeContext)
 
+
+  function handleTheme(){
+    if (typeof window !== "undefined") {
+
+      const selectedTheme = theme === 'light'? 'dark':'light'
+
+      setTheme(selectedTheme)
+    
+      localStorage.setItem('theme', selectedTheme)
+      
+      }
+  }
+
   
   return (
     <Wrapper>
@@ -33,7 +47,7 @@ function Navbar({setOpen}) {
           <Button>
             <IoLogoGithub />
           </Button>
-          <Button onClick={setTheme}>
+          <Button onClick={handleTheme}>
             {theme ? <IoMdMoon />:<IoIosSunny />}
           </Button>
 
