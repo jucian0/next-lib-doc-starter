@@ -44,7 +44,7 @@ const Content = styled.div`
 `
 
 // eslint-disable-next-line react/prop-types
-export default function Page({ children }) {
+export default function DocsLayout({ children }) {
   const [open, setOpen] = useState(true)
 
   const resize = () => {
