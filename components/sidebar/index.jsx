@@ -17,7 +17,7 @@ const links = [
     subItems:[
       {
         label:'Quick Start',
-        link:'/doc/input'
+        link:'/docs/input'
       }
     ]
   },
@@ -27,19 +27,19 @@ const links = [
     subItems:[
       {
         label:'firstItem()',
-        link:'/doc/api/first-item'
+        link:'/docs/api/first-item'
       },
       {
         label:'secondItem',
-        link:'/doc/api/second-item'
+        link:'/docs/api/second-item'
       },
       {
         label:'lastItem()',
-        link:'/doc/api/last-item'
+        link:'/docs/api/last-item'
       },
       {
         label:'useExample()',
-        link:'/doc/api/use-example'
+        link:'/docs/api/use-example'
       },
     ]
   },
@@ -49,15 +49,15 @@ const links = [
     subItems:[
       {
         label:'How to use',
-        link:'/doc/usage/first-item'
+        link:'/docs/usage/first-item'
       },
       {
         label:'Debounced form',
-        link:'/doc/usage/second-item'
+        link:'/docs/usage/second-item'
       },
       {
         label:'Uncontrolled form',
-        link:'/doc/usage/last-item'
+        link:'/docs/usage/last-item'
       },
     ]
   },

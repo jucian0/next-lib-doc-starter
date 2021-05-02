@@ -69,3 +69,23 @@ export const MenuButton = styled(Button)`
       display:none;
    }
 `
+
+export const Links = styled.div`
+   display:flex;
+   justify-content:start;
+   align-items:center;
+   width:100%;
+
+   a{
+      padding:0 20px;
+      text-decoration:none;
+      font-weight:600;
+      &:hover{
+         color:${({theme})=> theme.colors.primary};
+      }
+   }
+
+   a:first-child{
+      padding: 0 20px 0 40px;
+   }
+`

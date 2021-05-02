@@ -8,7 +8,7 @@ import { IoLogoGithub,IoLogoTwitter ,IoMdMoon,IoIosSunny} from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 
 
-import { Container, ActionButtons, Button,MenuButton,Wrapper } from './styles';
+import { Container, ActionButtons, Button,MenuButton,Wrapper, Links } from './styles';
 import {Logo} from '../logo'
 import logo from "../../img/logo.svg";
 import { ThemeContext } from "../providers/themeContext";
@@ -33,6 +33,12 @@ function Navbar({setOpen}) {
             <span>UseForm</span>
           </Logo>
         </Link>
+        <Links>
+          <Link href="/docs">Doc</Link>
+          <Link href="/docs">Doc</Link>
+          <Link href="/docs">Doc</Link>
+
+        </Links>
         <ActionButtons>
           <Button>
             <IoLogoTwitter />
@@ -41,7 +47,7 @@ function Navbar({setOpen}) {
             <IoLogoGithub />
           </Button>
           <Button onClick={handleTheme}>
-            {theme ? <IoMdMoon />:<IoIosSunny />}
+            {theme ==='light' ? <IoMdMoon />:<IoIosSunny />}
           </Button>
 
           <MenuButton onClick={setOpen}>
