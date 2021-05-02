@@ -5,7 +5,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.nav`
    display:flex;
    width:100%;
-   height:60px;
+   height:auto;
    overflow:hidden;
    justify-content:center;
    align-items:center;
@@ -15,6 +15,7 @@ export const Wrapper = styled.nav`
    position:fixed;
    background-color: ${({theme})=>theme.colors.background};
    z-index:1;
+   flex-direction:column;
 `;
 
 export const Container = styled.div`
@@ -75,6 +76,7 @@ export const Links = styled.div`
    justify-content:start;
    align-items:center;
    width:100%;
+   padding-left:40px;
 
    a{
       padding:0 20px;
@@ -82,7 +84,41 @@ export const Links = styled.div`
       font-weight:600;
    }
 
-   a:first-child{
-      padding: 0 20px 0 40px;
+   @media (max-width:600px){
+      display:none;
+   }
+`
+
+export const MobileLink = styled.div`
+   display:flex;
+   flex-direction:column;
+   width:100%;
+   justify-content:flex-end;
+   align-items:center;
+   background-color:#ffffff;
+   height:${({isOpen})=> isOpen? 60:10}px;
+
+   @media (min-width:600px){
+      display:none;
+   }
+
+   div{
+      display:${({isOpen})=> isOpen? 'flex':'none'};
+      width:100%;
+      justify-content:start;
+      padding: 0 20px;
+
+      a{
+         text-decoration:none;
+         padding-right:20px;
+         font-weight:600;
+      }
+   }
+
+   button{
+      bottom:0;
+      cursor:pointer;
+      background-color:transparent;
+      border:none;
    }
 `

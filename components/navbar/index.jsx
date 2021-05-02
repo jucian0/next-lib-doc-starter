@@ -2,26 +2,30 @@
 /* eslint-disable react/prop-types */
 
 
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Link from 'next/link'
 import { IoLogoGithub,IoLogoTwitter ,IoMdMoon,IoIosSunny} from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
+import {MdDragHandle} from 'react-icons/md';
+import { useRouter } from 'next/router';
 
 
-import { Container, ActionButtons, Button,MenuButton,Wrapper, Links } from './styles';
+import { Container, ActionButtons, Button,MenuButton,Wrapper, Links, MobileLink } from './styles';
 import {Logo} from '../logo'
 import logo from "../../img/logo.svg";
 import { ThemeContext } from "../providers/themeContext";
+import {lightTheme} from '../providers/theme'
 
 function Navbar({setOpen}) {
 
   const {setTheme, theme} =  useContext(ThemeContext)
+  const {route} = useRouter()
+  const [mobile,setMobile] = useState(false)
 
   function handleTheme(){
       const selectedTheme = theme === 'light'? 'dark':'light'
       setTheme(selectedTheme)
   }
-
   
   return (
     <Wrapper>
@@ -35,7 +39,6 @@ function Navbar({setOpen}) {
         <Links>
           <Link href="/docs">Doc</Link>
           <Link href="/docs">Doc</Link>
-          <Link href="/docs">Doc</Link>
         </Links>
         <ActionButtons>
           <Button>
@@ -47,13 +50,24 @@ function Navbar({setOpen}) {
           <Button onClick={handleTheme}>
             {theme ==='light' ? <IoMdMoon />:<IoIosSunny />}
           </Button>
-
-          <MenuButton onClick={setOpen}>
-            <TiThMenu />
-          </MenuButton>
-
+          {
+            route !== '/' && (
+            <MenuButton onClick={setOpen}>
+              <TiThMenu />
+            </MenuButton>
+          )
+}
         </ActionButtons>
       </Container>
+      <MobileLink isOpen={mobile}>
+        <div>
+          <Link href="/docs">Doc</Link>
+          <Link href="/docs">Doc</Link>
+        </div>
+        <button onClick={()=>setMobile(!mobile)}>
+          <MdDragHandle color={lightTheme.colors.primary} />
+        </button>
+      </MobileLink>
     </Wrapper>
   );
 }

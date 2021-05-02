@@ -32,6 +32,7 @@ export const FooterInformation = styled.div`
   color:${({theme})=> theme.colors.textColor};
   width:100%;
   margin-top:10px;
+  padding:0 15px;
   display:flex;
   justify-content:space-between;
   align-items:flex-start;
