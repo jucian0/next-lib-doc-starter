@@ -26,12 +26,12 @@ const Container = styled.div`
 `
 const MainContent = styled.div`
   display: flex;
-  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 240px)')};
+  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 260px)')};
   height: calc(100% - 60px);
   position: sticky;
   justify-content: center;
   float: left;
-  left: ${({ open }) => (open ? '240px' : '0')};
+  left: ${({ open }) => (open ? '260px' : '0')};
   transition: all 0.5s ease-in-out;
 `
 

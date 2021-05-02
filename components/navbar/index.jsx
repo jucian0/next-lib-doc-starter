@@ -17,7 +17,6 @@ function Navbar({setOpen}) {
 
   const {setTheme, theme} =  useContext(ThemeContext)
 
-
   function handleTheme(){
       const selectedTheme = theme === 'light'? 'dark':'light'
       setTheme(selectedTheme)
@@ -37,7 +36,6 @@ function Navbar({setOpen}) {
           <Link href="/docs">Doc</Link>
           <Link href="/docs">Doc</Link>
           <Link href="/docs">Doc</Link>
-
         </Links>
         <ActionButtons>
           <Button>

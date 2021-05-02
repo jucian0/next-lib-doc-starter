@@ -80,9 +80,6 @@ export const Links = styled.div`
       padding:0 20px;
       text-decoration:none;
       font-weight:600;
-      &:hover{
-         color:${({theme})=> theme.colors.primary};
-      }
    }
 
    a:first-child{

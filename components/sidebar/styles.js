@@ -14,7 +14,7 @@ export const Aside = styled.aside`
   overflow:auto;
   top:60px;
   transition: margin-left 0.5s ease-in-out;
-  margin-left: ${({ open }) => (open ? 0 : '-240px')};
+  margin-left: ${({ open }) => (open ? 0 : '-260px')};
   width: 260px;
   color: ${({ theme }) => theme.colors.textColor};
 
