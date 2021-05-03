@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
+import { DefaultSeo } from 'next-seo'
 
 const Container = styled.div`
    display:flex;
@@ -23,6 +24,14 @@ const Container = styled.div`
 
 export default function FourOhFour() {
   return <Container>
+         <DefaultSeo
+        title="404 Page not found"
+        titleTemplate="%s | Next SEO"
+        description="Page not found"
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+      />
     <h1>404 - Page Not Found</h1>
     <Link href="/">
       <a>
