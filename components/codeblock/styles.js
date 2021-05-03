@@ -11,8 +11,9 @@ export const Container = styled.div`
 
     }
   & pre {
-    border-radius: 8px;
-    padding-left:16px;
+    border-radius: 0.5rem;
+    padding-left:1rem;
+    box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
   }
 
   & .header{
@@ -23,21 +24,25 @@ export const Container = styled.div`
     font-family:'Roboto', sans-serif!important;
     color: #ffffff;
     background-color: ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
-    border-radius: 0 0 2px 2px;
-    margin-right:5px;
+    border: 0.063rem solid ${({ theme }) => theme.colors.primary};
+    border-radius: 0 0 0.125rem 0.125rem;
+    margin-right:0.313rem;
     width:max-content;
-    padding:4px;
+    padding:0.25rem;
     display:inline;
   }
 
   & button {
     background-color: ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 0.063rem solid ${({ theme }) => theme.colors.primary};
     cursor: pointer;
-    padding-top:5px;
-    border-radius: 0 0 2px 2px;
-    margin-right:10px;
+    padding-top:0.313rem;
+    border-radius: 0 0 0.125rem 0.125rem;
+    margin-right:0.625rem;
+
+    &:hover{
+      box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+    }
   }
   }
 `
