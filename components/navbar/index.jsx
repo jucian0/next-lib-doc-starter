@@ -64,7 +64,7 @@ function Navbar({setOpen}) {
           <Link href="/docs">Doc</Link>
           <Link href="/docs">Doc</Link>
         </div>
-        <button onClick={()=>setMobile(!mobile)}>
+        <button type="button" onClick={()=>setMobile(!mobile)}>
           <MdDragHandle color={lightTheme.colors.primary} />
         </button>
       </MobileLink>

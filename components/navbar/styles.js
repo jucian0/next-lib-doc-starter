@@ -82,6 +82,10 @@ export const Links = styled.div`
       padding:0 20px;
       text-decoration:none;
       font-weight:600;
+
+      &:hover{
+         color:${({theme})=> theme.colors.primary};
+      }
    }
 
    @media (max-width:600px){
@@ -106,12 +110,16 @@ export const MobileLink = styled.div`
       display:${({isOpen})=> isOpen? 'flex':'none'};
       width:100%;
       justify-content:start;
-      padding: 0 20px;
+      padding: 0 20px 0 22px;
 
       a{
          text-decoration:none;
          padding-right:20px;
          font-weight:600;
+         
+         &:hover{
+            color:${({theme})=> theme.colors.primary};
+         }
       }
    }
 
