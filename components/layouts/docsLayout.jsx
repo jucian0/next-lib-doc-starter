@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Footer from '../footer'
@@ -44,6 +45,7 @@ const Content = styled.div`
 
 export default function DocsLayout({ children }) {
   const [open, setOpen] = useState(true)
+  const {route} = useRouter()
 
   const resize = () => {
     if (window?.innerWidth > 989) {
@@ -57,6 +59,10 @@ export default function DocsLayout({ children }) {
     window.addEventListener('resize', resize)
     resize()
   }, [])
+
+  useEffect(()=>{
+    resize()
+  },[route])
 
 
   return (
