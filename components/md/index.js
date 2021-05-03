@@ -82,9 +82,10 @@ export const LI = styled.li`
    list-style-type: circle;
 `
 
-export const IMG = styled.img`
+export const Image = styled.img`
    border-radius: 0.5rem;
    box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+   width:100%;
 `
 
 export const StyledPre = styled.div`
@@ -105,6 +106,8 @@ export const Table = styled.table`
    border-spacing: 0;
    border-collapse: collapse;
    color: ${({theme})=>theme.colors.textColor};
+   box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+   border-radius:8px;
 
    td, th {
         &:first-child {
@@ -147,6 +150,10 @@ export const Table = styled.table`
             line-height: 2.5rem;
             border-bottom: solid 0.063rem ${({theme})=>theme.colors.border};
             will-change: red;
+
+            &:last-child{
+               border-bottom:none;
+            }
         }
 	}
 `
