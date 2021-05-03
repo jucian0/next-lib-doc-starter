@@ -1,16 +1,17 @@
-/* eslint-disable import/prefer-default-export */
 import { createGlobalStyle } from 'styled-components'
 import { ScrollBar } from '../scrollbar'
 
 export const lightTheme = {
   colors: {
     primary: '#2ec4b6',
+    primaryHover:'#29B0A3',
     secondary: '#3a506b',
     dark: '#0b132b',
     border: '#edf2f4',
     red: '#e71d36',
     background: '#FFFFFF',
-    textColor: '#3a506b',
+    textColor: '#4b5563',
+    headingColor:'#111827',
     bkgPre: '#edf2f4',
     colorPre: '#edf2f4',
     bkgScrollbar: '#3a506b',
@@ -20,12 +21,14 @@ export const lightTheme = {
 export const darkTheme = {
   colors: {
     primary: '#2ec4b6',
+    primaryHover:'#29B0A3',
     secondary: '#3a506b',
     dark: '#0b132b',
     border: '#1b262c',
     red: '#e71d36',
-    background: '#0b132b',
+    background: '#1c2128',
     textColor: '#edf2f4',
+    headingColor:'#edf2f4',
     bkgPre: '#3a506b',
     colorPre: '#edf2f4',
     bkgScrollbar: '#3a506b',
@@ -42,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
       box-sizing: border-box;
       ${ScrollBar};
       outline:none;
+      box-sizing: border-box;
    }
    html, body {
       width: 100%;
@@ -49,42 +53,32 @@ export const GlobalStyle = createGlobalStyle`
       background-color:${({ theme }) => theme.colors.background};
    }
 
-   pre, code{
-      font-family: 'Fira Code', monospace;
-      font-weight: 300;
+   h1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    }
+
+   a{
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.secondary};
    }
 
-
-   table, ul, li{
-      color: ${({ theme }) => theme.colors.textColor};
+   p{
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.textColor};
    }
 
-   .__json-pretty__{
-      line-height:1.3;
-      color:#bd93f9;
-      background:${({ theme }) => theme.colors.dark};
-      overflow:auto;
-      margin:10px;
-      padding:10px;
-      border-radius:5px;
-      border:1px solid ${({ theme }) => theme.colors.border};
+   strong{
+     font-weight:500;
    }
-   .__json-pretty__ .__json-key__{
-      color:#f8f8f2
-   }
-   .__json-pretty__ .__json-value__{
-      color:#bd93f9
-   }
-   .__json-pretty__ .__json-string__{
-      color:#f1fa8c
-   }
-   .__json-pretty__ .__json-boolean__{
-      color:#8be9fd
-   }
-   .__json-pretty-error__{
-      line-height:1.3;
-      color:#66d9ef;
-      background:#272822;
-      overflow:auto
+
+   line-height, ul {
+    font-size: 1rem;
+    line-height: 1.75;
+    color:${({theme})=> theme.colors.textColor};
    }
 `

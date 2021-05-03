@@ -1,6 +1,7 @@
-/* eslint-disable no-undef */
+import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import Footer from '../footer'
 
 import Navbar from '../navbar'
 import Sidebar from '../sidebar'
@@ -9,8 +10,13 @@ const Main = styled.main`
   display: flex;
   flex: 1;
   flex-direction: column;
+  align-items:center;
   width: 100%;
-  height: 100%;
+`
+
+const MainContainer = styled.div`
+  max-width:1440px;
+  width:100%;
 `
 
 const Container = styled.div`
@@ -20,28 +26,26 @@ const Container = styled.div`
 `
 const MainContent = styled.div`
   display: flex;
-  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 200px)')};
+  width: ${({ open }) => (!open ? '100%' : 'calc(100% - 260px)')};
   height: calc(100% - 60px);
-  position: fixed;
+  position: sticky;
   justify-content: center;
   float: left;
-  left: ${({ open }) => (open ? '200px' : '0')};
+  left: ${({ open }) => (open ? '260px' : '0')};
   transition: all 0.5s ease-in-out;
-  overflow: auto;
 `
 
 const Content = styled.div`
   display: block;
   width: 100%;
-  height: 100%;
   padding: 40px;
-  max-width: 1440px;
+  max-width: 1040px;
   background-color: ${({ theme }) => theme.colors.bkgContent};
 `
 
-// eslint-disable-next-line react/prop-types
-export default function Page({ children }) {
+export default function DocsLayout({ children }) {
   const [open, setOpen] = useState(true)
+  const {route} = useRouter()
 
   const resize = () => {
     if (window?.innerWidth > 989) {
@@ -56,15 +60,25 @@ export default function Page({ children }) {
     resize()
   }, [])
 
+  useEffect(()=>{
+    resize()
+  },[route])
+
+
   return (
-    <Main>
+    <>
       <Navbar setOpen={() => setOpen(!open)} />
-      <Container>
-        <Sidebar open={open} />
-        <MainContent open={open}>
-          <Content>{children}</Content>
-        </MainContent>
-      </Container>
-    </Main>
+      <Main>
+        <MainContainer>
+          <Container>
+            <Sidebar open={open} />
+            <MainContent open={open}>
+              <Content>{children}</Content>
+            </MainContent>
+          </Container>
+        </MainContainer>
+      </Main>
+      <Footer />
+    </>
   )
 }

@@ -1,28 +1,48 @@
-/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  border: 0.025rem solid ${({ theme }) => theme.colors.border};
-  padding: 0.15rem;
   margin: 1rem 0;
-  border-radius: 0.25rem;
-  background-color: transparent !important;
+  *{
+    font-family:monospace;
+    font-size: inherit;
+    white-space: pre;
+    font-size: .875rem;
+    white-space: pre-wrap
+
+    }
   & pre {
-    background-color: transparent !important;
+    border-radius: 0.5rem;
+    padding-left:1rem;
+    box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
+  }
+
+  & .header{
+    display:flex;
+    justify-content:flex-end;
+
+  & .language{
+    font-family:'Roboto', sans-serif!important;
+    color: #ffffff;
+    background-color: ${({ theme }) => theme.colors.primary};
+    border: 0.063rem solid ${({ theme }) => theme.colors.primary};
+    border-radius: 0 0 0.125rem 0.125rem;
+    margin-right:0.313rem;
+    width:max-content;
+    padding:0.25rem;
+    display:inline;
   }
 
   & button {
     background-color: ${({ theme }) => theme.colors.primary};
-    border: 1px solid ${({ theme }) => theme.colors.primary};
+    border: 0.063rem solid ${({ theme }) => theme.colors.primary};
     cursor: pointer;
-  }
+    padding-top:0.313rem;
+    border-radius: 0 0 0.125rem 0.125rem;
+    margin-right:0.625rem;
 
-  & div {
-    background-color: ${({ theme }) => theme.colors.dark}!important;
-    span {
-      font-family: 'Fira Code', monospace;
-      font-weight: 300;
-      background-color: ${({ theme }) => theme.colors.dark}!important;
+    &:hover{
+      box-shadow: 0 0.188rem 0.375rem rgba(0,0,0,0.16), 0 0.188rem 0.375rem rgba(0,0,0,0.23);
     }
+  }
   }
 `
