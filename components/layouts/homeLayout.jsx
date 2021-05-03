@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-/* eslint-disable no-undef */
 import React from 'react'
 import styled from 'styled-components'
 import Footer from '../footer'

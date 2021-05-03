@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import Footer from '../footer'
@@ -43,7 +42,6 @@ const Content = styled.div`
   background-color: ${({ theme }) => theme.colors.bkgContent};
 `
 
-// eslint-disable-next-line react/prop-types
 export default function DocsLayout({ children }) {
   const [open, setOpen] = useState(true)
 

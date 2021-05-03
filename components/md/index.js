@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-filename-extension */
-/* eslint-disable import/prefer-default-export */
 import styled from "styled-components";
 
 export const H1 = styled.h1`

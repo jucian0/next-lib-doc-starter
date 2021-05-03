@@ -1,7 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/prop-types */
-
-
 import React, { useContext, useState } from 'react';
 import Link from 'next/link'
 import { IoLogoGithub,IoLogoTwitter ,IoMdMoon,IoIosSunny} from "react-icons/io";
