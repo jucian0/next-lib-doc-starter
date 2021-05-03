@@ -7,6 +7,8 @@ export const Container = styled.div`
     font-size: inherit;
     white-space: pre;
     font-size: .875rem;
+    white-space: pre-wrap
+
     }
   & pre {
     border-radius: 8px;

@@ -6,7 +6,6 @@ import { ThemeContext } from 'styled-components';
 
 import { Aside, Item, Items, SubItems, SubItem } from './styles';
 
-
 const links = [
   {
     label:'Introduction',
@@ -76,28 +75,29 @@ function ActiveLink({ href,children }){
 }
 
 
-function Sidebar({open}) {
+function Sidebar({open,...rest}) {
 
   const [expanded,setExpanded] = useState('')
-
+  
+  
   return (
     <Aside open={open}>
       <Items>
         {
           links.map(link =>(
-            <Item>
+            <Item key={link.label}>
               <span onClick={()=>setExpanded('')}>
                 {link.label}
               </span>
               {
-            expanded === ''
-          }
+                expanded === ''
+              }
               <SubItems>
                 {
-            link.subItems?.map(subItem =>(
-              <ActiveLink href={subItem.link}>{subItem.label}</ActiveLink>
-            ))
-          }
+                  link.subItems?.map(subItem =>(
+                    <ActiveLink key={subItem.label} href={subItem.link}>{subItem.label}</ActiveLink>
+                    ))
+                  }
               </SubItems>
             </Item>
           ))
