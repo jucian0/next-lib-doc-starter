@@ -10,12 +10,19 @@ import { lightTheme, GlobalStyle, darkTheme } from '../components/providers/them
 import {ThemeContext} from '../components/providers/themeContext'
 import DocsLayout from '../components/layouts/docsLayout'
 import HomeLayout from '../components/layouts/homeLayout'
+import fav from '../img/form-complete.svg'
 
 
 function MyHead(){
   return(
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+      <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@YOUR_TWITTER_USERNAME" />
+        <meta name="twitter:title" content="TITLE_FOR_YOUR_PAGE" />
+        <meta name="twitter:description" content="DESCRIPTION_FOR_YOUR_PAGE" />
+        <meta name="twitter:image" content="URL_FOR_YOUR_IMAGE" />
+        <link rel="shortcut icon" href={fav} />
     </Head>
   )
 }

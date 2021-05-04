@@ -98,7 +98,7 @@ export const MobileLink = styled.div`
    width:100%;
    justify-content:flex-end;
    align-items:center;
-   background-color:#ffffff;
+   background-color:${({theme})=>theme.colors.background};
    height:${({isOpen})=> isOpen? 60:10}px;
 
    @media (min-width:600px){

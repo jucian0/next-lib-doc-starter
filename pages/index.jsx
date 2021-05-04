@@ -2,6 +2,7 @@ import React from 'react'
 import { DefaultSeo } from 'next-seo'
 import styled from 'styled-components'
 import Iframe from 'react-iframe'
+import { useRouter } from 'next/router'
 
 
 const Hero = styled.div`
@@ -83,6 +84,12 @@ const CodeSandBox = styled.div`
   `
 
 function Index() {
+  const {push} = useRouter()
+
+  function redirect(){
+    push('/docs')
+  }
+
   return (
     <div>
       <DefaultSeo
@@ -96,7 +103,7 @@ function Index() {
       <Hero>
         <h1>UseForm</h1>
         <p>UseFom provides a way to create complex forms easily.</p>
-        <button>Read docs</button>
+        <button onClick={redirect}>Read docs</button>
 
         <div style={{margin:30}}>
           <a href="https://github.com/useform/useform/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/useform/useform"/> </a>
