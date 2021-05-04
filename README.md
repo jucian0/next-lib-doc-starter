@@ -1,4 +1,6 @@
 # Next Documentation Library Starter
+
+Next Library starter is a repository that provide a initial effort to make beautiful documentations, form react components or library.
 ## Getting Started
 
 ## Demo https://next-lib-doc-starter.vercel.app/

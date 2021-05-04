@@ -10,7 +10,8 @@ import { lightTheme, GlobalStyle, darkTheme } from '../components/providers/them
 import {ThemeContext} from '../components/providers/themeContext'
 import DocsLayout from '../components/layouts/docsLayout'
 import HomeLayout from '../components/layouts/homeLayout'
-import fav from '../img/form-complete.svg'
+import fav from '../img/green_logo.svg'
+import lib_logo from '../img/lib_logo.png'
 
 
 function MyHead(){
@@ -21,7 +22,7 @@ function MyHead(){
         <meta name="twitter:site" content="@YOUR_TWITTER_USERNAME" />
         <meta name="twitter:title" content="TITLE_FOR_YOUR_PAGE" />
         <meta name="twitter:description" content="DESCRIPTION_FOR_YOUR_PAGE" />
-        <meta name="twitter:image" content="URL_FOR_YOUR_IMAGE" />
+        <meta name="twitter:image" content={lib_logo} />
         <link rel="shortcut icon" href={fav} />
     </Head>
   )

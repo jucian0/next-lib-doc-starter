@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import {Container, FooterContent, FooterInformation, FooterLogo} from './styles'
 import {Logo} from '../logo'
-import logo from "../../img/logo.svg";
+import logo from "../../img/green_logo.svg";
 
 
 export default function Footer(){

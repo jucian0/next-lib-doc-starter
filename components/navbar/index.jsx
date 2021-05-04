@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 
 import { Container, ActionButtons, Button,MenuButton,Wrapper, Links, MobileLink } from './styles';
 import {Logo} from '../logo'
-import logo from "../../img/logo.svg";
+import logo from "../../img/green_logo.svg";
 import { ThemeContext } from "../providers/themeContext";
 import {lightTheme} from '../providers/theme'
 
