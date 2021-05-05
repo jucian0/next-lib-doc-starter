@@ -13,7 +13,7 @@ const links = [
     subItems:[
       {
         label:'Quick Start',
-        link:'/docs/index'
+        link:'/docs'
       }
     ]
   },
