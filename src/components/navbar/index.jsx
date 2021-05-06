@@ -4,12 +4,10 @@ import { IoLogoGithub,IoLogoTwitter ,IoMdMoon,IoIosSunny} from "react-icons/io";
 import { TiThMenu } from "react-icons/ti";
 import {MdDragHandle} from 'react-icons/md';
 import { useRouter } from 'next/router';
-
+import  Config from '../../config';
 
 import { Container, ActionButtons, Button,MenuButton,Wrapper, Links, MobileLink } from './styles';
 import {Logo} from '../logo'
-import logo from "../../../public/green_logo.svg";
-
 import { ThemeContext } from "../providers/themeContext";
 import {lightTheme} from '../providers/theme'
 
@@ -27,16 +25,20 @@ function Navbar({setOpen}) {
   return (
     <Wrapper>
       <Container>
-        <Link href="/">
+        <div>
+        <Link href={Config.path}>
           <Logo>
-            <img src={logo} alt="logo" />
-            <span>UseForm</span>
+            {Config.logo}
           </Logo>
         </Link>
         <Links>
-          <Link href="/docs">Doc</Link>
-          <Link href="/docs">Doc</Link>
+        {
+          Config.navLinks.map(item=>(
+            <Link href={item.path}>{item.label}</Link>
+          ))
+        }
         </Links>
+        </div>
         <ActionButtons>
           <Button>
             <IoLogoTwitter />
@@ -48,18 +50,21 @@ function Navbar({setOpen}) {
             {theme ==='light' ? <IoMdMoon />:<IoIosSunny />}
           </Button>
           {
-            route !== '/' && (
-            <MenuButton onClick={setOpen}>
-              <TiThMenu />
-            </MenuButton>
-          )
-}
+            route !== Config.path && (
+              <MenuButton onClick={setOpen}>
+                <TiThMenu />
+              </MenuButton>
+            )
+          }
         </ActionButtons>
       </Container>
       <MobileLink isOpen={mobile}>
         <div>
-          <Link href="/docs">Doc</Link>
-          <Link href="/docs">Doc</Link>
+        {
+          Config.navLinks.map(item=>(
+            <Link href={item.path}>{item.label}</Link>
+          ))
+        }
         </div>
         <button type="button" onClick={()=>setMobile(!mobile)}>
           <MdDragHandle color={lightTheme.colors.primary} />

@@ -3,6 +3,7 @@ import { DefaultSeo } from 'next-seo'
 import styled from 'styled-components'
 import Iframe from 'react-iframe'
 import { useRouter } from 'next/router'
+import config from '../config'
 
 
 const Hero = styled.div`
@@ -101,8 +102,8 @@ function Index() {
         }}
       />
       <Hero>
-        <h1>UseForm</h1>
-        <p>UseFom provides a way to create complex forms easily.</p>
+        <h1>{config.siteName}</h1>
+        <p>{config.siteSlogan}</p>
         <button onClick={redirect}>Read docs</button>
 
         <div style={{margin:30}}>

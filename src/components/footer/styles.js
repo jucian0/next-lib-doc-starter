@@ -44,5 +44,11 @@ export const FooterLogo = styled.div`
   display:flex;
   justify-content:start;
   align-items:flex-start;
+  flex-direction:column;
   padding:15px 10px;
+
+  .footer-text{
+    margin-top:10px;
+      color:${({theme})=> theme.colors.textColor};
+  }
 `

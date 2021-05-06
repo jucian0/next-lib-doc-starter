@@ -26,6 +26,10 @@ export const Container = styled.div`
    align-items:center;
    padding:5px 0px 5px 20px;
    max-width:1440px;
+   & div{
+      display:flex;
+      align-items:center;
+   }
 `;
 
 export const ActionButtons = styled.div`
@@ -74,7 +78,7 @@ export const Links = styled.div`
    display:flex;
    justify-content:start;
    align-items:center;
-   width:100%;
+   width:fit-content;
    padding-left:40px;
 
    a{

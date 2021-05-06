@@ -7,23 +7,7 @@ import { lightTheme, GlobalStyle, darkTheme } from '../components/providers/them
 import {ThemeContext} from '../components/providers/themeContext'
 import DocsLayout from '../layouts/docsLayout'
 import HomeLayout from '../layouts/homeLayout'
-import fav from '../../public/green_logo.svg'
-import lib_logo from '../../public/lib_logo.png'
-
-
-function MyHead(){
-  return(
-    <Head>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
-      <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@YOUR_TWITTER_USERNAME" />
-        <meta name="twitter:title" content="TITLE_FOR_YOUR_PAGE" />
-        <meta name="twitter:description" content="DESCRIPTION_FOR_YOUR_PAGE" />
-        <meta name="twitter:image" content={lib_logo} />
-        <link rel="shortcut icon" href={fav} />
-    </Head>
-  )
-}
+import config from '../config'
 
 
 export default ({ Component, pageProps }) => {
@@ -60,7 +44,7 @@ export default ({ Component, pageProps }) => {
       <ThemeContext.Provider value={{theme, setTheme:handleTheme}}>
         <ThemeProvider theme={theme ==='light'? lightTheme: darkTheme}>
           <MDXProvider>
-            <MyHead />
+            {config.head}
             <DocsLayout>
               <Component {...pageProps} />
             </DocsLayout>
@@ -75,7 +59,7 @@ export default ({ Component, pageProps }) => {
     <ThemeContext.Provider value={{theme, setTheme:handleTheme}}>
       <ThemeProvider theme={theme ==='light'? lightTheme: darkTheme}>
         <MDXProvider>
-          <MyHead />
+          {config.head}
           <HomeLayout>
             <Component {...pageProps} />
           </HomeLayout>
