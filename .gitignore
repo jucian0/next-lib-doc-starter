@@ -4,4 +4,4 @@ node_modules/
 .env
 .DS_Store
 /.env.production
-.yarn.lock
+yarn.lock

@@ -105,14 +105,6 @@ function Index() {
         <h1>{config.siteName}</h1>
         <p>{config.siteSlogan}</p>
         <button onClick={redirect}>Read docs</button>
-
-        <div style={{margin:30}}>
-          <a href="https://github.com/useform/useform/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/useform/useform"/> </a>
-          <a href="https://bundlephobia.com/result?p=@use-form/use-form@1.0.3"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/@use-form/use-form"/> </a>
-          <a href="https://bundlephobia.com/result?p=@use-form/use-form@1.0.3"><img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/@use-form/use-form"/> </a>
-          <a href="https://github.com/useform/useform"><img alt="GitHub stars" src="https://img.shields.io/github/stars/useform/useform?style=social"/> </a>
-          <a href="https://github.com/useform/useform"><img alt="GitHub forks" src="https://img.shields.io/github/forks/useform/useform?style=social"/> </a>
-        </div>
       </Hero>
       <CodeSandBox>
         <h1>Try it!</h1>
