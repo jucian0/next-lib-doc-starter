@@ -21,9 +21,8 @@ export const Aside = styled.aside`
     padding-left:0px;
   }
   li{
-    margin:5px;
+    margin:15px;
     border-radius:5px;
-    padding:5px;
   }
 `
 
@@ -41,17 +40,7 @@ export const Item = styled.li`
 `
 
 export const SubItems = styled.ul`
- /* padding-top:20px;
- padding-left:10px;
- padding-bottom:0; */
-  /* position: relative;
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  padding-top: 20px;
-  overflow:auto;
-  transition: margin-left 0.5s ease-in-out;
-  color: ${({ theme }) => theme.colors.textColor}; */
+
 `
 
 export const Indicator = styled.div`
@@ -83,7 +72,6 @@ export const SubItem = styled.li`
    
   &.active {
     background-color: ${({ theme }) => theme.colors.border};
-
     a {
       color: ${({ theme }) => theme.colors.primary};
     }
@@ -102,65 +90,3 @@ export const SubItem = styled.li`
   }
 
 `
-
-// export const SubList = styled.div`
-//   position: fixed;
-//   display: flex;
-//   flex-shrink: 0;
-//   flex-direction: column;
-//   padding-top: 20px;
-//   position: sticky;
-//   overflow:auto;
-//   top:60px;
-//   transition: margin-left 0.5s ease-in-out;
-//   color: ${({ theme }) => theme.colors.textColor};
-// `
-
-
-// export const Item2 = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-//   padding: 15px 30px;
-//   font-weight:600;
-//   &:hover{
-//     cursor:pointer;
-//   }
-// `
-
-// export const Item = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-//   padding: 15px 30px;
-
-//   & a {
-//     display: flex;
-//     cursor: pointer;
-//     font-size: 16px;
-//     font-weight: 400;
-//     text-decoration: none;
-//     color: ${({ theme }) => theme.colors.textColor};
-//   }
-
-//   &.active {
-//     background-color: ${({ theme }) => theme.colors.border};
-//     a {
-//       color: ${({ theme }) => theme.colors.primary};
-//       font-weight:600;
-//     }
-//     ${Indicator} {
-//       background-color: ${({ theme }) => theme.colors.primary};
-//     }
-//   }
-
-//   &:hover {
-//     ${Indicator} {
-//       background-color: ${({ theme }) => theme.colors.primary};
-//     }
-//     a {
-//       font-weight:600;
-//       color: ${({ theme }) => theme.colors.primary};
-//     }
-//   }
-// `
