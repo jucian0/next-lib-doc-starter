@@ -21,7 +21,9 @@ export const Aside = styled.aside`
     padding-left:0px;
   }
   li{
-    margin:15px;
+    margin:5px;
+    border-radius:5px;
+    padding:5px;
   }
 `
 
@@ -65,6 +67,7 @@ export const SubItem = styled.li`
   align-items: center;
   justify-content: flex-start;
   font-weight: 500;
+  transition: all 0.5s ease-in-out;
 
   &:hover{
      cursor:pointer;
@@ -80,6 +83,7 @@ export const SubItem = styled.li`
    
   &.active {
     background-color: ${({ theme }) => theme.colors.border};
+
     a {
       color: ${({ theme }) => theme.colors.primary};
     }
