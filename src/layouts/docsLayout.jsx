@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import ContentFooter from '../components/contentFooter'
 import Footer from '../components/footer'
 
 import Navbar from '../components/navbar'
@@ -73,7 +74,10 @@ export default function DocsLayout({ children }) {
           <Container>
             <Sidebar open={open} />
             <MainContent open={open}>
-              <Content>{children}</Content>
+              <Content>
+                {children}
+                <ContentFooter/>
+              </Content>
             </MainContent>
           </Container>
         </MainContainer>
