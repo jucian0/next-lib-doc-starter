@@ -4,14 +4,14 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import MDXProvider from '../components/providers/MDXProvider'
 import { lightTheme, GlobalStyle, darkTheme } from '../components/providers/theme'
-import {ThemeContext} from '../components/providers/themeContext'
+import { ThemeContext } from '../components/providers/themeContext'
 import DocsLayout from '../layouts/docsLayout'
 import HomeLayout from '../layouts/homeLayout'
 import config from '../config'
 
 
 export default ({ Component, pageProps }) => {
-  
+
   const [theme, setTheme] = useState('light')
   const router = useRouter()
   const pathname = router?.pathname
@@ -19,30 +19,30 @@ export default ({ Component, pageProps }) => {
 
   if (!pathname) {
     throw new Error('pathname undefined')
-}
+  }
 
-  function handleTheme(selectedTheme){
+  function handleTheme(selectedTheme) {
     if (typeof window !== "undefined") {
       setTheme(selectedTheme)
       localStorage.setItem('theme', selectedTheme)
     }
   }
-  
-  useLayoutEffect(()=>{
+
+  useLayoutEffect(() => {
 
     if (typeof window !== "undefined") {
-    
+
       const currentTheme = localStorage.getItem('theme')
-          handleTheme(currentTheme||'light')
-      }
+      handleTheme(currentTheme || 'light')
+    }
 
-  },[])
+  }, [])
 
 
-  if(pathname.startsWith('/doc')){
-    return(
-      <ThemeContext.Provider value={{theme, setTheme:handleTheme}}>
-        <ThemeProvider theme={theme ==='light'? lightTheme: darkTheme}>
+  if (pathname.startsWith('/doc')) {
+    return (
+      <ThemeContext.Provider value={{ theme, setTheme: handleTheme }}>
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
           <MDXProvider>
             {config.head}
             <DocsLayout>
@@ -55,9 +55,9 @@ export default ({ Component, pageProps }) => {
     )
   }
 
-  return(
-    <ThemeContext.Provider value={{theme, setTheme:handleTheme}}>
-      <ThemeProvider theme={theme ==='light'? lightTheme: darkTheme}>
+  return (
+    <ThemeContext.Provider value={{ theme, setTheme: handleTheme }}>
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <MDXProvider>
           {config.head}
           <HomeLayout>

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
    display:flex;
    justify-content:space-between;
-   padding : 50px 0 0 0 ;
+   padding : 50px 0 0 0;
 
    a{
       color:${({theme})=> theme.colors.textColor};

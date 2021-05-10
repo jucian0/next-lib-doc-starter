@@ -46,7 +46,7 @@ const Content = styled.div`
 
 export default function DocsLayout({ children }) {
   const [open, setOpen] = useState(true)
-  const {route} = useRouter()
+  const { route } = useRouter()
 
   const resize = () => {
     if (window?.innerWidth > 989) {
@@ -61,9 +61,9 @@ export default function DocsLayout({ children }) {
     resize()
   }, [])
 
-  useEffect(()=>{
+  useEffect(() => {
     resize()
-  },[route])
+  }, [route])
 
 
   return (
@@ -76,7 +76,7 @@ export default function DocsLayout({ children }) {
             <MainContent open={open}>
               <Content>
                 {children}
-                <ContentFooter/>
+                <ContentFooter />
               </Content>
             </MainContent>
           </Container>
